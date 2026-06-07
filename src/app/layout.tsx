@@ -42,11 +42,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
-        {/* Google AdSense — replace ca-pub-XXXXXXXX with your publisher ID */}
         <Script
           async
           src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClient}`}
           crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+        <Script
+          src="https://pl29665665.effectivecpmnetwork.com/f2/66/78/f266785153bf49efef36a437d42db16c.js"
           strategy="afterInteractive"
         />
       </head>
