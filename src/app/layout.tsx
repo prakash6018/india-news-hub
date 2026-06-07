@@ -52,6 +52,26 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           src="https://pl29665665.effectivecpmnetwork.com/f2/66/78/f266785153bf49efef36a437d42db16c.js"
           strategy="afterInteractive"
         />
+        <Script
+          src="https://pl29665690.effectivecpmnetwork.com/8a/1b/00/8a1b0000bc76e6ea66f77220300a221f.js"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="adsterra-onclick"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                var fired = false;
+                document.addEventListener('click', function() {
+                  if (fired) return;
+                  fired = true;
+                  window.open('https://www.effectivecpmnetwork.com/tbpjfmv5u4?key=83619c54b7a913b4ba996bd9d92d8071', '_blank');
+                });
+              })();
+            `,
+          }}
+        />
       </head>
       <body className={inter.className}>
         <Header />
