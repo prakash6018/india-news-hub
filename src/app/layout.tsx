@@ -8,6 +8,9 @@ import Footer from '@/components/Footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
+  other: {
+    'google-adsense-account': 'ca-pub-3072389927318955',
+  },
   title: {
     default: 'IndiaFlash News – Breaking News India 24/7',
     template: '%s | IndiaFlash News',
