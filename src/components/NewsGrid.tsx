@@ -1,6 +1,6 @@
 import { Article } from '@/lib/types';
 import NewsCard from './NewsCard';
-import AdUnit from './AdUnit';
+import AdsterraBanner from './AdsterraBanner';
 
 interface NewsGridProps {
   articles: Article[];
@@ -33,13 +33,8 @@ export default function NewsGrid({ articles, showAds = true }: NewsGridProps) {
         {chunks.map((item, index) => {
           if (item === 'ad') {
             return (
-              <div key={`ad-${index}`} className="sm:col-span-2 lg:col-span-3">
-                <AdUnit
-                  adSlot="1234567890"
-                  adFormat="horizontal"
-                  label="Sponsored"
-                  className="my-2"
-                />
+              <div key={`ad-${index}`} className="sm:col-span-2 lg:col-span-3 flex justify-center">
+                <AdsterraBanner adKey="561bc3fb06538ddcc498b578d98b7c2f" width={468} height={60} />
               </div>
             );
           }

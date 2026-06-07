@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import { TrendingUp } from 'lucide-react';
 import { Article, CATEGORIES } from '@/lib/types';
-import AdUnit from './AdUnit';
+import AdsterraBanner from './AdsterraBanner';
+import AdsterraNative from './AdsterraNative';
 import { truncate, formatDate } from '@/lib/api';
 
 interface SidebarProps {
@@ -11,8 +12,8 @@ interface SidebarProps {
 export default function Sidebar({ trendingArticles = [] }: SidebarProps) {
   return (
     <aside className="space-y-6">
-      {/* Sidebar Ad - Top */}
-      <AdUnit adSlot="9876543210" adFormat="rectangle" label="Advertisement" />
+      {/* Sidebar Ad - Top 300x250 */}
+      <AdsterraBanner adKey="721aedd2fcf2d19fc8eceb1442e3752e" width={300} height={250} />
 
       {/* Trending */}
       {trendingArticles.length > 0 && (
@@ -63,8 +64,11 @@ export default function Sidebar({ trendingArticles = [] }: SidebarProps) {
         </div>
       </div>
 
-      {/* Sidebar Ad - Bottom */}
-      <AdUnit adSlot="1122334455" adFormat="rectangle" label="Advertisement" />
+      {/* Sidebar Native Ad */}
+      <AdsterraNative />
+
+      {/* Sidebar Ad - Bottom 300x250 */}
+      <AdsterraBanner adKey="721aedd2fcf2d19fc8eceb1442e3752e" width={300} height={250} />
 
       {/* About Widget */}
       <div className="bg-gradient-to-br from-brand-navy to-gray-800 rounded-lg p-4 text-white text-sm">
